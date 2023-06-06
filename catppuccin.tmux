@@ -126,10 +126,10 @@ main() {
   readonly show_directory_in_window_status_current="#[fg=$thm_bg,bg=$thm_orange] #I #[fg=$thm_fg,bg=$thm_bg] #{b:pane_current_path} "
 
   local show_window_in_window_status
-  readonly show_window_in_window_status="#[fg=$thm_bg,bg=$thm_blue] #I#[fg=$thm_blue,bg=$thm_bg]$left_separator#[fg=$thm_fg,bg=$thm_bg,nobold,nounderscore,noitalics] #[fg=$thm_fg,bg=$thm_bg] #W "
+  readonly show_window_in_window_status="#[fg=$thm_bg,bg=$thm_orange] #I #[fg=$thm_fg,bg=$thm_bg] #W #[fg=$thm_fg,bg=$thm_bg,nobold,nounderscore,noitalics] "
 
   local show_window_in_window_status_current
-  readonly show_window_in_window_status_current="#[fg=$thm_bg,bg=$thm_orange] #I#[fg=$thm_orange,bg=$thm_bg]$left_separator#[fg=$thm_fg,bg=$thm_bg,nobold,nounderscore,noitalics] #[fg=$thm_fg,bg=$thm_gray] #W "
+  readonly show_window_in_window_status_current="#[fg=$thm_bg,bg=$thm_green] #I #[fg=$thm_fg,bg=$thm_gray] #W #[fg=$thm_fg,bg=$thm_bg,nobold,nounderscore,noitalics] "
 
   local show_user
   readonly show_user="#[fg=$thm_blue,bg=$thm_gray]$right_separator#[fg=$thm_bg,bg=$thm_blue]$user_icon #[fg=$thm_fg,bg=$thm_gray] #(whoami) "
@@ -170,7 +170,7 @@ main() {
     right_column2=$right_column2$show_date_time
   fi
 
-  set status-left ""
+  set status-left "#[fg=$thm_red,bg=$thm_bg,bold,nounderscore,noitalics]   "
 
   set status-right "${right_column1},${right_column2}"
 
